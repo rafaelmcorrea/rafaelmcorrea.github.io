@@ -1,2 +1,2 @@
 # rafaelmcorrea.github.io
-Currículo do Jornada Dev
+Currículo do Jornada Dev EBAC
