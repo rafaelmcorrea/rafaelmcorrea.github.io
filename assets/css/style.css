@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root{
+    --right-sec: #023E73;
+    --left-sec: #012340;
+    --color-detail: #4BF2E2;
+    --color-text: #d6dbdfaf;
+    --text: #D6DBDF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +17,14 @@
 }
 
 body {
-    background-color: #70c6c7;
+    min-height: 100vh;
+    background-color: #030B1E;
+    background-image: url('../img/backgound.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+span{
+    color: var(--color-detail);
 }
 
 .resume-contents {
@@ -18,19 +33,22 @@ body {
     margin: 2rem auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-}
+
+
+    -webkit-box-shadow: -10px 0px 13px -7px var(--color-detail), 10px 0px 13px -7px var(--color-detail), 5px 5px 15px 5px rgba(0,0,0,0.03); 
+    box-shadow: -10px 0px 13px -7px var(--color-detail), 10px 0px 13px -7px var(--color-detail), 5px 5px 15px 5px rgba(0,0,0,0.03);
+    }
 
 .left-section {
     grid-column: span 2;
     height: 100%;
-    background-color: #00204A;
+    background-color: var(--left-sec);
 }
 
 .right-section {
     grid-column: span 5;
     height: 100%;
-    background-color: #4B6982;
-    border-radius: 0px 60px 0px 0px;
+    background-color: var(--right-sec);
 }
 
 .left-section-content{
@@ -38,19 +56,19 @@ body {
 }
 
 .profile {
+    text-align: center;
     width: 100%;
-    border-bottom: 2px solid #1B2631;
+    border-bottom: 2px solid var(--color-detail);
 }
 
 .profile .profile-image {
     width: 90%;
     border-radius: 50%;
-    border: 4px solid #1B2631;
+    border: 4px solid var(--color-detail);
 }
-
 .name {
-    color: #D6DBDF;
-    font-size: 25px;
+    color: var(--text);
+    font-size: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
@@ -59,7 +77,7 @@ body {
 }
 
 .profession {
-    color: #FDB44B;
+    color: var(--color-detail);
     font-size: 15px;
     text-transform: uppercase;
     text-align: center;
@@ -68,9 +86,8 @@ body {
     padding-bottom: 1rem;
 }
 
-/* .contact-info { border-bottom: 2px solid #1B2631; } */
 .left-title {
-    color: #FDB44B;
+    color: var(--color-text);
     font-size: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -89,7 +106,7 @@ body {
     padding: .4rem 0;
     display: flex;
     align-items: center;
-    color: #d6dbdfaf;
+    color: var(--color-text);
     letter-spacing: 1px;
     font-size: 12px;
 }
@@ -98,7 +115,7 @@ body {
 .references ul li i {
     padding-right: 0.5rem;
     font-size: 18px;
-    color: #2E86C1;
+    color: var(--color-detail);
 }
 
 .skills ul {
@@ -106,28 +123,17 @@ body {
 }
 .skills ul li p {
     padding: .4rem 0;
-    color: #d6dbdfaf;
+    color: var(--color-text);
     font-size: 16px;
     letter-spacing: 1px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
 }
-
-.referance-name {
-    padding-top: 1.5rem;
-    padding-bottom: .4rem;
-    font-size: 18px;
-    color: #F9E79F;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
 .referance-profession {
     font-size: 16px;
-    color: #d6dbdfaf;
+    color: var(--color-text);
     letter-spacing: 1px;
-    /* text-transform: uppercase; */
     padding-bottom: .4rem;
 }
 
@@ -137,7 +143,7 @@ body {
 }
 
 .right-title {
-    color: #70C6C7;
+    color: var(--text);
     font-size: 30px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -152,10 +158,11 @@ body {
     padding-bottom: 2rem;
 }
 .about-me-contents {
-    font-size: 16px;
+   font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 2rem;
-    color: #F1F8FD;
+    color: var(--text);
 }
 
 .experience-contents,
@@ -164,7 +171,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 2rem;
-    color: #F1F8FD;
+    color: var(--text);
 }
 
 .exp-company-name,
@@ -174,38 +181,37 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #FDB44B;
-    padding-bottom: .4rem;
+    color: var(--color-detail);
 }
 
 .exp-time-period,
-.educationp-time-period,
+.education-school-time,
 .awards-time-period {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
-    line-height: 2rem;
+    margin-bottom: .4rem;
 }
 
 .exp-position,
-.education-subject,
+.education-subjact,
 .awards-name {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #FDB44B;
-    padding-bottom: .4rem;
+    color: var(--text);
+    padding-bottom: .1rem;
 }
-
 .exp-desc,
 .education-desc,
 .awards-desc {
     font-size: 14px;
     letter-spacing: 1px;
-    line-height: 1.5rem;
-    border-left: 3px solid #a5a3a3;
+    border-left: 3px solid var(--color-text);
     padding-left: 5px;
+    margin-bottom: .4rem;
 }
+
 
 /* Media queries */
 @media screen and (max-width:780px) {
@@ -214,9 +220,6 @@ body {
     .awards-contents {
         grid-template-columns: repeat(1, 1fr);
     }
-}
-
-@media screen and (max-width:780px) {
     .left-section {
         grid-column: span 3;
     }
@@ -224,9 +227,43 @@ body {
     .right-section {
         grid-column: span 4;
     }
-    
-}
+    .contact-info ul li,
+    .references ul li {
+        font-size: 14px;
+    }
+    .contact-info ul li i,
+    .references ul li i {
+        font-size: 14px;
+    }
+    .about-me-contents {
+        font-size: 12px;
+        line-height: 1rem;
+    }
+    .left-title {
+        font-size: 18px;
+    }
 
+    .right-title {
+        font-size: 20px;
+    }
+    .exp-company-name,
+    .education-school-name,
+    .awards-company-name {
+        font-size: 16px;
+    }
+
+    .exp-time-period,
+    .educationp-time-period,
+    .awards-time-period {
+        font-size: 14px;
+    }
+
+    .exp-position,
+    .education-subjact,
+    .awards-name {
+        font-size: 14px;
+    }
+}
 @media screen and (max-width:1200px) {
     .resume-contents {
         grid-template-columns: repeat(1, 1fr);
@@ -244,7 +281,7 @@ body {
     }
 
     .profession {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .left-title {
@@ -252,44 +289,43 @@ body {
     }
 
     .right-title {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .contact-info ul li,
     .references ul li {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .contact-info ul li i,
     .references ul li i {
-        /* padding-right: 1rem; */
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .skills ul li p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .about-me-contents {
-        font-size: 16px;
-        line-height: 1.5rem;
+        font-size: 14px;
+        line-height: 1rem;
     }
 
     .exp-company-name,
     .education-school-name,
     .awards-company-name {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .exp-time-period,
     .educationp-time-period,
     .awards-time-period {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .exp-position,
-    .education-subject,
+    .education-subjact,
     .awards-name {
-        font-size: 18px;
+        font-size: 14px;
     }
 }
