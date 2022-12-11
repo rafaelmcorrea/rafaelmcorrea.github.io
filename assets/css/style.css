@@ -7,7 +7,6 @@
     --color-text: #d6dbdfaf;
     --text: #D6DBDF;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +25,6 @@ body {
 span{
     color: var(--color-detail);
 }
-
 .resume-contents {
     min-height: 100vh;
     width: 80%;
@@ -56,7 +54,6 @@ span{
 }
 
 .profile {
-    text-align: center;
     width: 100%;
     border-bottom: 2px solid var(--color-detail);
 }
@@ -136,8 +133,6 @@ span{
     letter-spacing: 1px;
     padding-bottom: .4rem;
 }
-
-
 .right-section-contents {
     padding: 2rem 2rem;
 }
@@ -211,8 +206,6 @@ span{
     padding-left: 5px;
     margin-bottom: .4rem;
 }
-
-
 /* Media queries */
 @media screen and (max-width:780px) {
     .experience-contents,
