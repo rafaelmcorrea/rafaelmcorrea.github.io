@@ -153,7 +153,7 @@ span{
     padding-bottom: 2rem;
 }
 .about-me-contents {
-   font-size: 16px;
+   font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -172,7 +172,7 @@ span{
 .exp-company-name,
 .education-school-name,
 .awards-company-name {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -190,7 +190,7 @@ span{
 .exp-position,
 .education-subjact,
 .awards-name {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -202,7 +202,7 @@ span{
 .awards-desc {
     font-size: 14px;
     letter-spacing: 1px;
-    border-left: 3px solid var(--color-text);
+    border-left: 3px solid var(--color-detail);
     padding-left: 5px;
     margin-bottom: .4rem;
 }
@@ -256,10 +256,16 @@ span{
     .awards-name {
         font-size: 14px;
     }
+    .exp-description{
+        font-size: 14px;
+    }
 }
 @media screen and (max-width:1200px) {
     .resume-contents {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .profile{
+        text-align: center;
     }
 }
 
@@ -313,7 +319,7 @@ span{
     .exp-time-period,
     .educationp-time-period,
     .awards-time-period {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .exp-position,
